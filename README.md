@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # Runtime Blog
 
 > A blog that shows a list of posts and empowers readers to interact with them by adding comments and liking posts.
