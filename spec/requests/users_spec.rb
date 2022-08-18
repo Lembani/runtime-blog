@@ -16,4 +16,17 @@ describe 'GET /' do
   end
 end
 
-
+describe 'GET /users/:id' do
+  it 'returns http success status' do
+    get '/users/1'
+    expect(response).to have_http_status(:success)
+  end
+  it 'renders the show template' do
+    get '/users/1'
+    expect(response).to render_template('show')
+  end
+  it 'renders the text in post' do
+    get '/users/1'
+    expect(response.body).to include('User bio info')
+  end
+end
