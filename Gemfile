@@ -57,6 +57,7 @@ group :development, :test do
 
   # RSpec test gem
   gem 'rspec-rails'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
 end
 
 group :development do
