@@ -1,12 +1,14 @@
-<div>
-  <div>
-  <h3>Post title</h3>
-  <span>7 comments</span>
+
+<article class="post">
+  <h3><%= @post.title %>  by <%= @post.author.name %></h3>
+  <div class="post-stats">
+    <span>Comments: <%= @post.comments_counter %>, &nbsp;</span>
+    <span>Likes: <%= @post.likes_counter %></span>
   </div>
-  <div>
-    Detailed Post info here
-  </div>
-  <div>
-  <p>Post comments</p>
-  </div>
-</div>
+  <p><%= @post.text %></p>
+</article>
+<ul class="comments">
+  <% @post.recent_comments.each do |comment| %>
+    <li><%= comment.author.name %>: <%= comment.text %>
+  <% end %>
+</ul>

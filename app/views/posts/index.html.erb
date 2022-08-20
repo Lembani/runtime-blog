@@ -1,5 +1,13 @@
-<div>
-<h2>Post title</h2>
-<p>Post info</p>
-<p>comments</p>
-</div>
+
+<%= render partial:'partials/userpartial', locals: {user: @user} %>
+<% @user_posts.each do |post|%>
+<%= render partial:'partials/postpartial', locals: {post: post} %>
+
+<ul class="comments">
+      <% post.recent_comments.each do |comment| %>
+        <li><%= comment.author.name %>: <%= comment.text %>
+      <% end %>
+      </ul>
+<% end %>
+
+<button class="see-all">See more</button> 
