@@ -1,0 +1,24 @@
+<h1>Create new post</h1>
+<%= form_for @post, url: user_posts_path do |f| %>
+  <% if @post.errors.any? %>
+    <ul class="errors">
+      <% @post.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= f.hidden_field :author_id, value: 2 %>
+  <%= f.hidden_field :comments_counter, value: 0 %>
+  <%= f.hidden_field :likes_counter, value: 0 %>
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title, placeholder: 'Post title' %>
+  </div>
+  <div>
+    <%= f.label :text, "Description" %><br />
+    <%= f.text_area :text, placeholder: 'Post message here...' %>
+  </div>
+  <%= f.submit "Submit post", disable_with: 'Submitting...!!!' %>
+<% end %>
