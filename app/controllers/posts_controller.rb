@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(posts_params)
     if @post.save
-      redirect_to user_posts_path(id: @post.id, author_id: @post.author_id,
+      redirect_to user_posts_path(id: @post.id, author_id: current_user,
                                   comments_counter: @post.comments_counter,
                                   likes_counter: @post.likes_counter)
 
