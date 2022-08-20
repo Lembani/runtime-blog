@@ -1,14 +1,14 @@
+<%= render partial: 'partials/userpartial', locals: { user: @user } %>
+
 <div>
-  <div>
-    User image here
-  </div>
-  <h3>Name</h3>
-  <span>Posts published: 9</span>
-  <br />
-  <div>
-    User bio info
-  </div>
-  <div>
-    List of posts
-  </div>
+  <p>Bio
+    <p>
+    <%= @user.bio%>
+    </p>
+  </p>
+
+  <% @recent_posts.each do |recent| %>
+  <%= render partial: 'partials/postpartial', locals: { post: recent}  %>
+  <% end %>
+  <%= link_to("See all posts", user_posts_path(@user), class: "see-all")  %>
 </div>
