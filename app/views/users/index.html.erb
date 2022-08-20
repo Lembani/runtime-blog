@@ -1,18 +1,3 @@
-<div>
-  <div>
-    <div>
-      User image here
-    </div>
-    <h3>Name</h3>
-    <span>Posts published: 9</span>
-  </div>
-  <hr>
-  <div>
-    <div>
-      User image here
-    </div>
-    <h3>Name</h3>
-    <span>Posts published: 1</span>
-  </div>
-  <hr>
-</div>
+<% @users.each do |user| %>
+  <%= render partial: 'partials/userpartial', locals: { user: user } %>
+<% end %> 
