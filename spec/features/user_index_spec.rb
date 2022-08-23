@@ -15,7 +15,7 @@ RSpec.describe 'user_index', type: :feature do
 
   it 'shows the number of post of each user' do
     user = User.last
-    expect(page).to have_content("Number of posts: #{user.posts_count}")
+    expect(page).to have_content("Number of Posts: #{user.posts_counter}")
   end
 
   it 'should redirect to user show page when a name is clicked' do
