@@ -27,6 +27,6 @@ describe 'GET /users/:id/posts/:id' do
   end
   it 'renders the text in a post' do
     get '/users/1/posts/1'
-    expect(response.body).to include('Detailed Post info here')
+    expect(response.body).to include('This is my first post')
   end
 end
