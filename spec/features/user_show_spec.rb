@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'user_show', type: :feature do
   before(:each) do
-    visit(user_path(User.first.id))
+    visit(user_path(User.first))
   end
 
   it 'shows the user\'s profile picture' do
@@ -40,8 +40,8 @@ RSpec.describe 'user_show', type: :feature do
   end
 
   it 'redirects to the user\'s posts page when the button See all posts is clicked' do
-    user = User.first
+    user = User.first.id
     click_link('See all posts')
-    expect(page.current_path).to eql(user_posts_path(user_id: user.id).to_s)
+    expect(page.current_path).to eql(user_posts_path(user_id: user).to_s)
   end
 end
