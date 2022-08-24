@@ -15,7 +15,7 @@
 </ul>
 
 <%= form_for @like, url:likes_path do |f|%>
-  <%= f.hidden_field :author_id, value: current_user %>
+  <%= f.hidden_field :author_id, value: @post.author.id %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.submit "Like", disable_with: 'updating likes...!!!' %>
 <% end %>

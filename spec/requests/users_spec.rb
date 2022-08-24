@@ -12,7 +12,7 @@ describe 'GET /' do
   end
   it 'renders the text in post' do
     get '/users'
-    expect(response.body).to include('Posts published: 9')
+    expect(response.body).to include('Number of Posts: ')
   end
 end
 
@@ -27,6 +27,6 @@ describe 'GET /users/:id' do
   end
   it 'renders the text in post' do
     get '/users/1'
-    expect(response.body).to include('User bio info')
+    expect(response.body).to include('Teacher from Mexico.')
   end
 end

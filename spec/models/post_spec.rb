@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user = User.create(name: 'Tom', bio: 'Teacher in Mexico.')
+  user = User.create(name: 'Jane', bio: 'Teacher in Mexico.')
   user.save
 
   subject do

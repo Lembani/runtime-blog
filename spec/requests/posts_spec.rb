@@ -12,7 +12,7 @@ describe 'GET /users/:id/posts' do
   end
   it 'renders the text in posts' do
     get '/users/1/posts'
-    expect(response.body).to include('Post info')
+    expect(response.body).to include('This is my fourth post...')
   end
 end
 
@@ -27,6 +27,6 @@ describe 'GET /users/:id/posts/:id' do
   end
   it 'renders the text in a post' do
     get '/users/1/posts/1'
-    expect(response.body).to include('Detailed Post info here')
+    expect(response.body).to include('This is my first post')
   end
 end
