@@ -80,3 +80,29 @@ a {
 .new_comment input {
   width: fit-content;
 }
+
+.registration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.login-text {
+  text-align: center;
+}
+
+.links-signup {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
